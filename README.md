@@ -19,11 +19,11 @@ The lessons correspond to tags. Note that npm dependencies will be added for eac
 Start node server with
 
 ```shell
-SECRET="mysecret" node test.js
+SECRET="mysecret" node server.js
 ```
 
 or even
 
 ```shell
-SECRET=$(date | shasum | cut -c1-22) node test.js
+SECRET=$(date | shasum | cut -c1-22) node server.js
 ```
