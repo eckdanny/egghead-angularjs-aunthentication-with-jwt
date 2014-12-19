@@ -17,7 +17,11 @@ var app = express();
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
-app.use(expressJwt({ secret: jwtSecret }).unless({ path: [ '/login' ]}));
+app.use(expressJwt({ secret: jwtSecret }).unless({ path: [ '/login', '/random-company' ]}));
+
+app.get('/random-company', function (req, res) {
+  res.json(faker.Helpers.userCard().company);
+});
 
 app.get('/random-user', function (req, res) {
   var user = faker.Helpers.userCard();
