@@ -5,11 +5,11 @@ var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken');
 var expressJwt = require('express-jwt');
 
-var jwtSecret = 'fjkdlsajfoew239053/3uk';
+var jwtSecret = process.env.SECRET;
 
 var user = {
-  username: 'kentcdodds',
-  password: 'p'
+  username: 'admin',
+  password: 'password'
 };
 
 var app = express();

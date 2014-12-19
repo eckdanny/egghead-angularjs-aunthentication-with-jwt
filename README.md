@@ -14,3 +14,16 @@ Additionally it uses Bower to grab AngularJS. With bower installed:
 `bower install` in the project folder.
 
 The lessons correspond to tags. Note that npm dependencies will be added for each lesson, so it will be required to run `npm install` for each lesson to get the latest dependencies.
+
+
+Start node server with
+
+```shell
+SECRET="mysecret" node test.js
+```
+
+or even
+
+```shell
+SECRET=$(date | shasum | cut -c1-22) node test.js
+```
